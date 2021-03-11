@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+long double fact(int n)
+{
+    if(n < 0) 
+        return 0; 
+    if (n == 0) 
+        return 1; 
+    else 
+        return n * fact(n - 1); 
+}
+
+int main()
+{
+     int *x;  
+    int i, n, k, sum;
+
+    printf("N= ");
+    scanf("%d", &n);
+
+    
+    x = (int*)malloc(n * sizeof(int));
+
+    
+    for (i = 0; i<n; i++)
+    {
+        printf("x[%d] = ", i);
+        scanf("%d", &x[i]);
+    }
+    
+    x[i]= 2*x[i-1]+ fact(n);
+    
+    for(k=1; k<=n; k++)
+    {
+        sum+=2*k+1;
+    }
+    
+    cout<<sum;
+
+    getchar();
+    return 0;
+}
