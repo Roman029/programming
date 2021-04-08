@@ -128,11 +128,11 @@ bool isTriangular(int** arr, int n)
   {
     for (int j = 0; j < i; j++)
     {
-      if (arr[i][j] != 0)
+      if (arr[i][j] == 0)
       {
         s++;
       }
-      if (arr[n - i - 1][n - j - 1] != 0) 
+      if (arr[n - i - 1][n - j - 1] == 0) 
       {
         o++;
       }
